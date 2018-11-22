@@ -12,16 +12,52 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, required: true, autofocus: true  %>
   </div>
-
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, required: true %>
+  </div>
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, required: true %>
+  </div>
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_field :dob, as: :date, :start_year => 1910, :end_year => 2010, required: true %>
+  </div>
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, required: true  %>
+  </div>
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, required: true  %>
+  </div>
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field  :state, required: true%>
+  </div>
+  <div class="field">
+    <%= form.label :zip_code %>
+    <%= form.text_field :zip_code, required: true%>
+  </div>
   <div class="field">
     <%= form.label :account_type %>
     <%= form.select(:account_type, Account::ACCOUNT_TYPE, class: "form-control") %>
   </div>
-
+  <div class="field">
+    <%= form.label :account_pin %>
+    <%= form.text_field :account_pin, required: true %>
+  </div>
+  <div class="field">
+    <%= form.label :verify_pin %>
+    <%= form.text_field :account_pin, required: true%>
+  </div>
+ 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+ 

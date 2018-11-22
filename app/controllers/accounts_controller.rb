@@ -10,6 +10,7 @@ class AccountsController < ApplicationController
   # GET /accounts/1
   # GET /accounts/1.json
   def show
+    @transfer = @account.transfers.build
   end
 
   # GET /accounts/new
@@ -71,6 +72,6 @@ class AccountsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def account_params
-      params.require(:account).permit(:title,:account_type,:is_approve)
+      params.require(:account).permit(:title,:first_name,:last_name,:phone_number,:dob,:address,:city,:state,:zip_code,:account_type,:account_pin,:account_type,:is_approve )
     end
 end

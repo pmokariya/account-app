@@ -1,9 +1,46 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @account.title %>
+  <strong>first_name:</strong>
+  <%= @account.first_name %>
+</p>
+<p>
+  <strong>last_name:</strong>
+  <%= @account.last_name %>
+</p>
+<p>
+  <strong>phone_number:</strong>
+  <%= @account.phone_number %>
+</p>
+<p>
+  <strong>date_of_birth:</strong>
+  <%= @account.dob %>
+</p>
+<p>
+  <strong>address:</strong>
+  <%= @account.address %>
+</p>
+<p>
+  <strong>city:</strong>
+  <%= @account.city %>
+</p>
+<p>
+  <strong>state:</strong>
+  <%= @account.state %>
+</p>
+<p>
+  <strong>zip_code:</strong>
+  <%= @account.zip_code %>
+</p>
+<p>
+  <strong>account_type:</strong>
+  <%= @account.account_type %>
+</p>
+<p>
+  <strong>account_pin:</strong>
+  <%= @account.account_pin %>
 </p>
 
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+
+<h1>Transfers</h1>
+<h3><%= link_to 'Transfers', transfers_path %></h3>

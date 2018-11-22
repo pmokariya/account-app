@@ -13,7 +13,8 @@
   <tbody>
     <% @accounts.each do |account| %>
       <tr>
-        <td><%= account.title %></td>
+        <td><%= account.first_name %></td>
+        <td><%= account.account_number %></td>
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
         <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
